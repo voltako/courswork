@@ -1,5 +1,6 @@
 import random
 import time
+f = open('introsort.txt','w')
 start_time = time.time()
 def insertion_sort(nums):
     for i in range(1, len(nums)):
@@ -16,4 +17,7 @@ for n in  range(0,1010000,100000):
     b = len(arr)
     insertion_sort(arr)
     print(n)
-    print("%s seconds" % (time.time() - start_time))
+    timer = (time.time() - start_time)
+    print(timer)
+    print((timer, n), file=f)
+f.close()

@@ -77,8 +77,8 @@ for n in  range(0,1010000,100000):
     b = len(arr)
     introSort(arr, 2)
     print(n)
-    print("%s seconds" % (time.time() - start_time))
-    timer = ("%s seconds" % (time.time() - start_time))
-    f.write(str(n,timer)+'\n')
+    timer = (time.time() - start_time)
+    print(timer)
+    print((timer,n),file=f)
 f.close()
 

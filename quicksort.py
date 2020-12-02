@@ -28,9 +28,12 @@ for n in  range(0,1010000,100000):
     b = len(arr)
     quickSort(arr, 0, b - 1)
     print(n)
-    print("%s seconds" % (time.time() - start_time))
-    timer = ("%s"(time.time() - start_time))
-    f.write(str(n, timer) + '\n')
+    #print("%s seconds" % (time.time() - start_time))
+    timer = (time.time() - start_time)
+    print(timer)
+    print((timer,n),file=f)
+
+
 f.close()
 
 
